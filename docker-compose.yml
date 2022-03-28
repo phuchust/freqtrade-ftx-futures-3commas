@@ -1,15 +1,15 @@
 ---
 version: '3'
 services:
-  freqtrade1:
-    #image: freqtradeorg/freqtrade:stable
+  freqtrade:
+    image: phuchust/freqtrade-3c-ftx:v1.00.00
     # image: freqtradeorg/freqtrade:develop
     # Use plotting image
     # image: freqtradeorg/freqtrade:develop_plot
     # Build step - only needed when additional dependencies are needed
     build:
       context: .
-      dockerfile: ".dockerfile.custom"
+      dockerfile: "./dockerfile.custom"
     restart: unless-stopped
     container_name: freqtrade-3C-FTX-DCA
     volumes:
