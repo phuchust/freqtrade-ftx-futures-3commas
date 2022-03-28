@@ -9,7 +9,7 @@ services:
     # Build step - only needed when additional dependencies are needed
     build:
       context: .
-      dockerfile: "./docker/Dockerfile.custom"
+      dockerfile: ".dockerfile.custom"
     restart: unless-stopped
     container_name: freqtrade-3C-FTX-DCA
     volumes:
@@ -17,8 +17,8 @@ services:
     # Expose api on port 8080 (localhost only)
     # Please read the https://www.freqtrade.io/en/stable/rest-api/ documentation
     # before enabling this.
-    ports:
-      - "0.0.0.0:8080"
+    # ports:
+    #  - "0.0.0.0:8080"
     # Default command used when running `docker compose up`
     command: >
       trade
